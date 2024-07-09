@@ -1,6 +1,6 @@
-# Open source font cdn links for those who want it.
+# Open source cdn(font) links for those who want them.
 
-This project was created to include fonts that are not included in [Google Fonts](https://fonts.google.com/) directly from my own open source project, without including them from some sites that I do not find reliable. Here are some fonts that I like but are not included in [Google Fonts](https://fonts.google.com/);
+This project was created for me to include fonts that are not available in [Google Fonts](https://fonts.google.com/) directly from my own open source project, without adding them from some sites I find unreliable. Here are some fonts that I like but are not included in [Google Fonts](https://fonts.google.com/);
 
 | Font Name           | How to use in html?                                                                   |
 |---------------------|---------------------------------------------------------------------------------------|
