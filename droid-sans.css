@@ -1,11 +1,11 @@
 @font-face {
-    src: url('./droid-sans/DroidSans.ttf');
+    src: url('./fonts/droid-sans/DroidSans.ttf');
     font-family: 'Droid Sans';
     font-weight: normal;
 }
 
 @font-face {
-    src: url('./droid-sans/DroidSans-Bold.ttf');
+    src: url('./fonts/droid-sans/DroidSans-Bold.ttf');
     font-family: 'Droid Sans';
     font-weight: bold;
 }
