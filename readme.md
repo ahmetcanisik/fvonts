@@ -2,6 +2,7 @@
 
 ## Fonts
 
-| Font Name     | How to use in html?                                                               |
-|---------------|-----------------------------------------------------------------------------------|
-| <b>Cubano</b> | `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdnfv/cubano.css">` |
+| Font Name           | How to use in html?                                                                   |
+|---------------------|---------------------------------------------------------------------------------------|
+| <b>Droid Sans</b>   | `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fvonts/droid-sans.css">`   |
+| <b>Ubuntu Title</b> | `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fvonts/ubuntu-title.css">` |
