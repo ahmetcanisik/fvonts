@@ -6,3 +6,5 @@ This project was created for me to include fonts that are not available in [Goog
 |---------------------|---------------------------------------------------------------------------------------|
 | <b>Droid Sans</b>   | `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fvonts/droid-sans.css">`   |
 | <b>Ubuntu Title</b> | `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fvonts/ubuntu-title.css">` |
+
+license : [MIT](LICENSE)
