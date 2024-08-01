@@ -1,6 +1,2 @@
 .idea
 .vscode
-.npmignore
-package.json
-package-lock.json
-index.js

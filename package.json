@@ -1,0 +1,22 @@
+{
+    "name": "fvonts",
+    "version": "0.0.3",
+    "description": "Those who wish can use cdn files for my projects.",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ahmetcanisik/fvonts.git"
+    },
+    "keywords": [
+        "fvonts",
+        "fvuar",
+        "ahmetcanisik",
+        "fontscdn"
+    ],
+    "author": "fvuar",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ahmetcanisik/fvonts/issues"
+    },
+    "homepage": "https://github.com/ahmetcanisik/fvonts#readme"
+}
