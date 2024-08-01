@@ -1,0 +1,5 @@
+@import 'https://cdn.jsdelivr.net/npm/@fvonts/ubuntu-title';
+
+.ubuntu-title-font {
+    font-family: 'Ubuntu Title';
+}
