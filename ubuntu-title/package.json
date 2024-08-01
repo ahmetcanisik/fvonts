@@ -1,6 +1,6 @@
 {
   "name": "@fvonts/ubuntu-title",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Self-host the ubuntu-title font in a neatly bundled NPM package.",
   "main": "index.css",
   "publishConfig": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ahmetcanisik/fvonts/ubuntu-title"
+    "url": "git+https://github.com/ahmetcanisik/fvonts/tree/main/ubuntu-title"
   },
   "keywords": [
     "fvonts",
@@ -24,7 +24,7 @@
   "author": "ahmetcanisik",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ahmetcanisik/fvonts/ubuntu-title/issues"
+    "url": "https://github.com/ahmetcanisik/fvonts/tree/main/ubuntu-title/issues"
   },
-  "homepage": "https://github.com/ahmetcanisik/fvonts/ubuntu-title#readme"
+  "homepage": "https://github.com/ahmetcanisik/fvonts/tree/main/ubuntu-title#readme"
 }
