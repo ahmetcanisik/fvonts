@@ -1,8 +1,8 @@
 {
     "name": "fvonts",
-    "version": "0.0.3",
+    "version": "0.0.5",
     "description": "Those who wish can use cdn files for my projects.",
-    "main": "index.js",
+    "main": "index.css",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/ahmetcanisik/fvonts.git"
@@ -18,5 +18,8 @@
     "bugs": {
         "url": "https://github.com/ahmetcanisik/fvonts/issues"
     },
-    "homepage": "https://github.com/ahmetcanisik/fvonts#readme"
+    "homepage": "https://github.com/ahmetcanisik/fvonts#readme",
+    "dependencies": {
+        "commander": "^12.1.0"
+    }
 }

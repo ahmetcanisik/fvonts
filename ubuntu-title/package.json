@@ -1,11 +1,30 @@
 {
   "name": "@fvonts/ubuntu-title",
-  "version": "0.0.3",
-  "description": "Self-host the Ubuntu Title font in a neatly bundled NPM package.",
+  "version": "0.0.5",
+  "description": "Self-host the ubuntu-title font in a neatly bundled NPM package.",
   "main": "index.css",
-  "publishConfig": {"access": "public"},
-  "repository": "https://github.com/ahmetcanisik/fvonts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmetcanisik/fvonts/ubuntu-title"
+  },
+  "keywords": [
+    "fvonts",
+    "fonts",
+    "cdn-font",
+    "npm-fvonts",
+    "npm-font",
+    "ubuntu-title",
+    "fvonts-ubuntu-title",
+    "ubuntu-title-font",
+    "npm-ubuntu-title"
+  ],
   "author": "ahmetcanisik",
   "license": "MIT",
-  "private": false
+  "bugs": {
+    "url": "https://github.com/ahmetcanisik/fvonts/ubuntu-title/issues"
+  },
+  "homepage": "https://github.com/ahmetcanisik/fvonts/ubuntu-title#readme"
 }

@@ -1,0 +1,9 @@
+/* $font-name */
+@font-face {
+    font-family: '$[title]';
+    src: url('./files/$font-name.woff2') format('woff2'),
+        url('./files/$font-name.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
