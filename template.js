@@ -18,8 +18,7 @@ class Utils {
 
 class Filer {
     static async read_file(file) {
-        const read = await fs.readFile(file, "utf8");
-        return read;
+        return await fs.readFile(file, "utf8");
     }
 
     static async write_file(file, content) {
@@ -38,46 +37,40 @@ class Filer {
             console.error("Filer.make_dir() fonksiyonu çalışırken bir sorun oluştu!\nKlasör oluşturma esnasında bir hata meydana geldi.\n", err);
         }
     }
-
-    static async copy_file(src, dest) {
-        try {
-            await fs.access(src); // Dosyanın mevcut olduğundan emin ol
-            await fs.copyFile(src, dest);
-            console.log(`${src} dosyası şu adrese başarıyla kopyalandı!\n${dest}`);
-        } catch (err) {
-            console.error(`Filer.copy_file() fonksiyonu çalışırken bir hata meydana geldi!\nDosyaları Kopyalarken bir sorun oluştu!\n${err}`);
-        }
-    }
 }
 
 class Template {
-    static async replace({ fontName = "example-font", target = __dirname, noCss = false, templateFolderPath = path.join(__dirname, "template") } = {}) {
+    static async replace({ fontName = "example-font", destination = __dirname, noCss = false, templateFolderPath = path.join(__dirname, "template") } = {}) {
         try {
             const project = ProjectInfo.parse;
             const config = {
                 prefix: "$fv",
                 replacements: {
                     'fontName': fontName,
-                    'version': project.version,
+                    'version': project.version || "0.0.1",
                     'githubRepository': `https://github.com/ahmetcanisik/fvonts/tree/main/${fontName}`,
-                    'author': project.author.name,
-                    'license': project.license,
+                    'author': project.author.name || "your",
+                    'license': project.license || "MIT",
                     'fontTitle': Utils.capitalizeFontName(fontName),
                 }
             }
             const files = await fs.readdir(templateFolderPath);
-            const targetDir = path.join(target, fontName);
+            const targetDir = path.join(destination, fontName);
             await Filer.make_dir(targetDir);
             await Filer.make_dir(path.join(targetDir, "files"));
 
             for (const file of files) {
                 const srcPath = path.join(templateFolderPath, file);
                 const destPath = path.join(targetDir, file);
+                const fileExt = path.extname(srcPath);
                 let fileContent = await Filer.read_file(srcPath);
 
                 for (const [placeholder, value] of Object.entries(config.replacements)) {
                     const prefix = `${config.prefix}.${placeholder}`;
                     const regex = new RegExp(Utils.escapeRegex(prefix), 'g');
+                    if (noCss && fileExt === ".css") {
+                        continue;
+                    }
                     fileContent = fileContent.replace(regex, value);
                     await Filer.write_file(destPath, fileContent);
                 }
