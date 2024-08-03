@@ -40,7 +40,7 @@ class Filer {
 }
 
 class Template {
-    static async replace({ fontName = "example-font", destination = __dirname, noCss = false, templateFolderPath = path.join(__dirname, "template") } = {}) {
+    static async replace({ fontName = "example-font", destination = ".", noCss = false, templateFolderPath = path.join(".", "template") } = {}) {
         try {
             const project = ProjectInfo.parse;
             const config = {

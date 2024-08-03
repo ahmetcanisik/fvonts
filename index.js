@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { Command } = require('commander');
-const { version } = require("./package.json");
+const { ProjectInfo } = require("./info");
 const { Template } = require("./template");
 
 if (require.main === module) {
@@ -8,7 +8,7 @@ if (require.main === module) {
 
     program.name("fvonts")
         .description("Fvonts, Self-host Fonts")
-        .version(version);
+        .version(ProjectInfo.parse.version);
 
 
     program.command("tmt")
@@ -18,7 +18,6 @@ if (require.main === module) {
         .option('-t, --template <directory>', 'Template Directory')
         .option('-d, --destination <directory>', 'Destination directory')
         .action((str, options) => {
-            console.log(options);
             Template.replace({
                 fontName: str,
                 noCss: !options.css,
