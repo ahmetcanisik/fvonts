@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const { Command } = require('commander');
-const { ProjectInfo } = require("./info");
+const { version } = require("./package.json");
 const { Template } = require("./template");
 
 if (require.main === module) {
@@ -8,7 +8,7 @@ if (require.main === module) {
 
     program.name("fvonts")
         .description("Fvonts, Self-host Fonts")
-        .version(ProjectInfo.parse.version);
+        .version(version);
 
 
     program.command("tmt")
