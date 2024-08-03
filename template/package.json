@@ -1,0 +1,25 @@
+{
+    "name": "@fvonts/$fv.fontName",
+    "version": "$fv.version",
+    "description": "Self-host the $fv.fontTitle font in a neatly bundled NPM package.",
+    "main": "index.css",
+    "publishConfig": {"access": "public"},
+    "repository": {
+      "type": "git",
+      "url": "git+$fv.githubRepository"
+    },
+    "keywords": [
+      "fvonts",
+      "fonts",
+      "cdn-font",
+      "npm-fvonts",
+      "npm-font"
+    ],
+    "author": "$fv.author",
+    "license": "$fv.license",
+    "bugs": {
+      "url": "$fv.githubRepository/issues"
+    },
+    "homepage": "$fv.githubRepository#readme"
+  }
+  

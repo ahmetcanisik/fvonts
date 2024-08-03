@@ -1,8 +1,4 @@
 #!/usr/bin/env node
-/**
- * npm publish yazmak yerine node push.js yazacağım. hatta node push.js i package.json içerisinde script altına
- * alıp yarn publish bile yazabilirim
- */
 const { Command } = require('commander');
 const { version } = require("./package.json");
 const { Template } = require("./template");
@@ -15,13 +11,17 @@ if (require.main === module) {
         .version(version);
 
 
-    program.command("template")
-        .description("Font template generator")
+    program.command("tmt")
+        .description("Fvonts Font Template Generator")
         .argument("<string>", 'string to template')
         .option('--no-css', 'Don\'t touch css file')
+        .option('-t, --target <directory>', 'Target directory')
         .action((str, options) => {
-            const template = new Template(str, options.noCss ? false : true);
-            template.replace();
+            Template.replace({
+                fontName: str,
+                noCss: options.noCss,
+                target: options.target
+            });
         })
 
     program.parse(process.argv);

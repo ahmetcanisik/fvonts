@@ -1,8 +1,11 @@
 {
     "name": "fvonts",
-    "version": "0.0.5",
+    "version": "0.0.7",
     "description": "Those who wish can use cdn files for my projects.",
-    "main": "index.css",
+    "main": "index.js",
+    "bin": {
+        "fvonts": "index.js"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/ahmetcanisik/fvonts.git"
@@ -13,7 +16,11 @@
         "ahmetcanisik",
         "fontscdn"
     ],
-    "author": "fvuar",
+    "author": {
+        "name": "ahmetcanisik",
+        "email": "can.isik.business@gmail.com",
+        "url": "https://ahmetcanisik.com"
+    },
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/ahmetcanisik/fvonts/issues"

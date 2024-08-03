@@ -1,12 +1,7 @@
 .gitignore
 .gitattributes
-ubuntu-title
 node_modules
 template
 yarn.lock
 fonts.json
-ubuntu-title
-ubuntu-title
-ubuntu-title
-ubuntu-title
-ubuntu-title
+published-fonts
