@@ -48,7 +48,8 @@ class Template {
                 replacements: {
                     'fontName': fontName,
                     'version': project.version || "0.0.1",
-                    'githubRepository': `https://github.com/ahmetcanisik/fvonts/tree/main/${fontName}`,
+                    'githubRepository': `https://github.com/ahmetcanisik/fvonts`,
+					'githubTree': 'tree/main',
                     'author': project.author.name || "your",
                     'license': project.license || "MIT",
                     'fontTitle': Utils.capitalizeFontName(fontName),

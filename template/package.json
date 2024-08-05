@@ -6,7 +6,7 @@
     "publishConfig": {"access": "public"},
     "repository": {
       "type": "git",
-      "url": "git+$fv.githubRepository"
+      "url": "git+$fv.githubRepository/$fv.githubTree/$fv.fontName"
     },
     "keywords": [
       "fvonts",
@@ -20,6 +20,6 @@
     "bugs": {
       "url": "$fv.githubRepository/issues"
     },
-    "homepage": "$fv.githubRepository#readme"
+    "homepage": "$fv.githubRepository/$fv.githubTree/$fv.fontName#readme"
   }
   

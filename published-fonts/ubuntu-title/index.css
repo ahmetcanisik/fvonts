@@ -8,7 +8,7 @@
     font-display: swap;
 }
 
-/* ubuntu-title bold */
+/* ubuntu-title normal */
 @font-face {
     font-family: 'Ubuntu Title';
     src: url('files/Ubuntu-Title.woff2') format('woff2'),
