@@ -1,20 +1,9 @@
 #!/usr/bin/env node
+const nowDir = process.cwd();
 const fs = require("node:fs/promises");
 const path = require("node:path");
-const { ProjectInfo } = require("./info");
-
-class Utils {
-    static capitalizeFontName(templateName) {
-        return templateName
-            .split('-')
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ');
-    }
-
-    static escapeRegex(string) {
-        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    }
-}
+const { config } = require(path.join(nowDir, "fvonts.config.js"));
+const { Utils } = require("./utils");
 
 class Filer {
     static async read_file(file) {
@@ -40,21 +29,16 @@ class Filer {
 }
 
 class Template {
-    static async replace({ fontName = "example-font", destination = ".", noCss = false, templateFolderPath = path.join(".", "template") } = {}) {
+    static async replace({ fontName = "example-font", destination = nowDir, noCss = false, templateFolderPath = path.join(nowDir, "template") } = {}) {
         try {
-            const project = ProjectInfo.parse;
-            const config = {
+            const conf = {
                 prefix: "$fv",
-                replacements: {
-                    'fontName': fontName,
-                    'version': project.version || "0.0.1",
-                    'githubRepository': `https://github.com/ahmetcanisik/fvonts`,
-					'githubTree': 'tree/main',
-                    'author': project.author.name || "your",
-                    'license': project.license || "MIT",
-                    'fontTitle': Utils.capitalizeFontName(fontName),
-                }
+                replacements: {...config.package, title: Utils.capitalizeFontName(fontName)}
             }
+            if (config.custom) {
+                conf.replacements = {...conf.replacements, ...config.custom}
+            }
+            conf.replacements.name = fontName;
             const files = await fs.readdir(templateFolderPath);
             const targetDir = path.join(destination, fontName);
             await Filer.make_dir(targetDir);
@@ -66,8 +50,8 @@ class Template {
                 const fileExt = path.extname(srcPath);
                 let fileContent = await Filer.read_file(srcPath);
 
-                for (const [placeholder, value] of Object.entries(config.replacements)) {
-                    const prefix = `${config.prefix}.${placeholder}`;
+                for (const [placeholder, value] of Object.entries(conf.replacements)) {
+                    const prefix = `${conf.prefix}.${placeholder}`;
                     const regex = new RegExp(Utils.escapeRegex(prefix), 'g');
                     if (noCss && fileExt === ".css") {
                         continue;
