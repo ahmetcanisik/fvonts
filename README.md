@@ -6,8 +6,6 @@ This project was created for me to include fonts that are not available in [Goog
 |---------------------|---------------------------------------------------------------------------------------|
 | <b>Ubuntu Title</b> | `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fvonts/ubuntu-title">` |
 
-license : [MIT](LICENSE)
-
 
 
 ## 1. Create Project And Template Folder
@@ -80,3 +78,5 @@ module.exports = {
 ```js
 ...Visit [my personel website]($fv.my-page).
 ```
+
+license : [MIT](LICENSE)
