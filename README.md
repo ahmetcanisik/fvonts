@@ -8,6 +8,47 @@ This project was created for me to include fonts that are not available in [Goog
 
 license : [MIT](LICENSE)
 
+
+
+## 1. Create Project And Template Folder
+
+```shell
+mkdir your-font-name && 
+cd your-font-name &&
+npm init -y 
+```
+
+## Create file for template
+
+template klasörü içerisinde oluşturacağınız dosyalar `new` parametresi ile oluşturulan font klasörüne taşınacaktır.
+
+`template/README.md`
+```md
+# $fv.name
+Description for $fv.name project.
+```
+
+## Install Fvonts
+
+```shell
+npm install -g fvonts@latest
+```
+
+veya npx ile indirme yapmadan da çalıştırabilirsiniz.
+
+```shell
+npx fvonts new [your-font-name]
+```
+
+
+## Create font project with fvonts-cli
+
+```shell
+fvonts new [your-font-name]
+```
+
+
+
 ## Setting up Config File
 
 `fvonts.config.js`
