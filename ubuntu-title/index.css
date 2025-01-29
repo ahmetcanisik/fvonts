@@ -1,0 +1,19 @@
+/* ubuntu-title bold */
+@font-face {
+    font-family: 'Ubuntu Title';
+    src: url('files/Ubuntu-Title-fr.woff2') format('woff2'),
+        url('files/Ubuntu-Title-fr.woff') format('woff');
+    font-weight: 700 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ubuntu-title normal */
+@font-face {
+    font-family: 'Ubuntu Title';
+    src: url('files/Ubuntu-Title.woff2') format('woff2'),
+        url('files/Ubuntu-Title.woff') format('woff');
+    font-weight: 100 600;
+    font-style: normal;
+    font-display: swap;
+}

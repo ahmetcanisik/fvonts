@@ -1,0 +1,7 @@
+.gitignore
+.gitattributes
+node_modules
+template
+yarn.lock
+fonts.json
+published-fonts
