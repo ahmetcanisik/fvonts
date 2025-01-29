@@ -3,8 +3,6 @@ import { Command } from "commander";
 import { version } from "../package.json";
 import { Template } from "./template";
 
-console.log(require.main);
-
 if (require.main === module) {
     const program = new Command();
 
@@ -23,14 +21,14 @@ if (require.main === module) {
         .option("-d, --destination <directory>", "Destination directory")
         .action((str: string, options: {
             excludeExtension?: string;
-            noFiles?: boolean;
+            files?: boolean;
             templateFolderPath?: string;
             destination?: string;
         }) => {
             Template.replace({
                 fontName: str,
                 excludeExtension: options.excludeExtension,
-                files: options.noFiles,
+                files: options.files,
                 destination: options.destination,
                 templateFolderPath: options.templateFolderPath,
             });
